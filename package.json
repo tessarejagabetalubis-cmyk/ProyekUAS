@@ -2,9 +2,12 @@
   "name": "proyekuas",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "test": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -13,12 +16,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/tessarejagabetalubis-cmyk/ProyekUAS/issues"
   },
   "homepage": "https://github.com/tessarejagabetalubis-cmyk/ProyekUAS#readme",
   "devDependencies": {
+    "@types/node": "^26.6.11",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2"
   }
